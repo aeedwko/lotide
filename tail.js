@@ -22,3 +22,9 @@ assertEqual(tail(["A", "B", "C"])[0], "B");
 assertEqual(tail(["A", "B", "C"])[1], "C");
 assertEqual(tail([1,2,3])[0], 2);
 assertEqual(tail([1,2,3])[1], 3);
+
+assertEqual(tail([1]).length, 0);
+assertEqual(tail([]).length, 0);
+
+assertEqual(tail(["A", "B", "C"]).length, 2);
+assertEqual(tail([1,2,3]).length, 2);
