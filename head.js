@@ -16,4 +16,4 @@ assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
 assertEqual(head([1]), 1);
 assertEqual(head("Hello"), "H");
 assertEqual(head(["A", "E"]), "A");
-assertEqual(head([], undefined));
+assertEqual(head([]), undefined);
