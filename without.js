@@ -25,8 +25,9 @@ const without = function(source, itemsToRemove) {
   let isRemovable = false;
 
   for (let i = 0; i < source.length; i++) {
+    isRemovable = false;
     for (let j = 0; j < itemsToRemove.length; j++) {
-      if(source[i] === itemsToRemove[j]) {
+      if (source[i] === itemsToRemove[j]) {
         isRemovable = true;
         break;
       }
@@ -34,16 +35,10 @@ const without = function(source, itemsToRemove) {
     if (!isRemovable) {
       subset.push(source[i]);
     }
-
-    isRemovable = false;
   }
 
   return subset;
 };
-
-console.log(without([1, 2, 3], [1])); // => [2, 3]
-console.log(without(["1", "2", "3"], [1, 2, "3"])); // => ["1", "2"]
-console.log(without([], ))
 
 assertArraysEqual(without([1,2,3], [1]), [2,3]);
 assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1","2"]);
