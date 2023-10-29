@@ -19,11 +19,14 @@ const countLetters = function(sentence) {
 };
 
 // assuming uppercase and lowercase letters are unique
-assertEqual(countLetters("lighthouse in the house")["l"], 1);
-assertEqual(countLetters("lighthouse in the house")["h"], 4);
-assertEqual(countLetters("lighthouse in the house")["u"], 2);
-assertEqual(countLetters("lighthouse in the house")[" "], undefined);
-assertEqual(countLetters("lighthouse in the house")["n"], 1);
-assertEqual(countLetters("lighthouse in the house")["z"], undefined);
-assertEqual(countLetters("lighthouse in the house")["l"], 1);
+
+let result = countLetters("lighthouse in the house");
+
+assertEqual(result["l"], 1);
+assertEqual(result["h"], 4);
+assertEqual(result["u"], 2);
+assertEqual(result[" "], undefined);
+assertEqual(result["n"], 1);
+assertEqual(result["z"], undefined);
+assertEqual(result["l"], 1);
 assertEqual(countLetters("lighthouse in the house LLL")["L"], 3);
