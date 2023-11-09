@@ -19,7 +19,7 @@ describe("#head", () => {
   });
 
   it("returns 'H' for 'Hello'", () => {
-    assert.strictEqual(head('H'), 'H');
+    assert.strictEqual(head('Hello'), 'H');
   });
 
   it("returns 'A' for ['A', 'E']", () => {
