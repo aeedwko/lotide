@@ -30,3 +30,5 @@ assertEqual(result["n"], 1);
 assertEqual(result["z"], undefined);
 assertEqual(result["l"], 1);
 assertEqual(countLetters("lighthouse in the house LLL")["L"], 3);
+
+module.exports = countLetters;

@@ -29,3 +29,5 @@ assertEqual(findKey(restaurants, x => x.stars === 2), "noma");
 assertEqual(findKey(restaurants, x => x.stars === 3), "Akaleri");
 assertEqual(findKey(emptyArr, x => x.stars === 3), undefined);
 assertEqual(findKey(testArr, x => x === 3), "a");
+
+module.exports = findKey;

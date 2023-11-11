@@ -36,3 +36,5 @@ assertArraysEqual(map(strArr, str => `${str} is a letter`), ["a is a letter", "b
 
 const emptyArr = [];
 assertArraysEqual(map(emptyArr, item => item), []);
+
+module.exports = map;

@@ -50,3 +50,5 @@ assertArraysEqual(without([1,2,3], [1]), [2,3]);
 const words = [1, 2, 3];
 without(words, [1]);
 assertArraysEqual(words, [1,2,3]);
+
+module.exports = without;
