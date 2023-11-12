@@ -3,7 +3,7 @@ const countLetters = require('../countLetters');
 
 describe("#countLetters - input string is 'lighthouse in the house'", () => {
   // assuming uppercase and lowercase letters are unique
-  let result = countLetters("lighthouse in the house");
+  const result = countLetters("lighthouse in the house");
 
   it("returns 1 for result['l']", () => {
     assert.strictEqual(result["l"], 1);
