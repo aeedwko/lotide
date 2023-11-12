@@ -1,11 +1,26 @@
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 const eqArrays = require('../eqArrays');
 
-// TEST CODE
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
-assertEqual(eqArrays([1, 2, 3], [1, 2]), false);
-assertEqual(eqArrays([1, 2], [1, 2, 3]), false);
-assertEqual(eqArrays(["hello", "", 3], [1, "hello", 3]), false);
-assertEqual(eqArrays([], [1, 2, 3]), false);
-assertEqual(eqArrays([], []), true);
-assertEqual(eqArrays([undefined], [0]), false);
+describe("#eqArrays", () => {
+  it("returns true for eqArrays([1, 2, 3], [1, 2, 3])", () => {
+    assert.strictEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
+  });
+  it("returns false for eqArrays([1, 2, 3], [1, 2])", () => {
+    assert.strictEqual(eqArrays([1, 2, 3], [1, 2]), false);
+  });
+  it("returns false for eqArrays([1, 2], [1, 2, 3])", () => {
+    assert.strictEqual(eqArrays([1, 2], [1, 2, 3]), false);
+  });
+  it("returns false for eqArrays(['hello', '', 3], [1, 'hello', 3])", () => {
+    assert.strictEqual(eqArrays(["hello", "", 3], [1, "hello", 3]), false);
+  });
+  it("returns false for eqArrays([], [1, 2, 3])", () => {
+    assert.strictEqual(eqArrays([], [1, 2, 3]), false);
+  });
+  it("returns true for eqArrays([], [])", () => {
+    assert.strictEqual(eqArrays([], []), true);
+  });
+  it("returns false for eqArrays([undefined], [0])", () => {
+    assert.strictEqual(eqArrays([undefined], [0]), false);
+  });
+});
