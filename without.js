@@ -1,5 +1,5 @@
 const without = function(source, itemsToRemove) {
-  let subset = [];
+  const subset = [];
   let isRemovable = false;
 
   for (let i = 0; i < source.length; i++) {
